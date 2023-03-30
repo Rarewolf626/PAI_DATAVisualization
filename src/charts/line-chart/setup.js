@@ -16,7 +16,7 @@
  'use strict';
 
  /** @desc import AEMET dataset and remove last element */
- import { PECNOCTATIONS } from './../../JSON/pecnoctaciones.js';
+ import { PECNOCTATIONS } from '../../JSON/pecnoctaciones.js';
  const PECNOCTATIONS_DATA = PECNOCTATIONS.slice(0, -1);
  
  /** @desc Obtain the number of rainy days in every month */

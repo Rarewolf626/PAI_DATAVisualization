@@ -16,7 +16,7 @@
 'use strict';
 
 import { CONFIG } from './config.js';
-import { Chart, registerables } from './../../../node_modules/chart.js/dist/chart.esm.js';
+import { Chart, registerables } from '../../../node_modules/chart.js/dist/chart.esm.js';
 Chart.register(...registerables);
 
 let CTX = document.getElementById("myChart").getContext("2d");
