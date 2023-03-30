@@ -661,14 +661,14 @@ export const PECNOCTATIONS = [ {
         {
             "año": "2014",
             "mes": "13",
-            "1_estrella": "224,217",
-            "2_estrellas": "405,218",
-            "3_estrellas": "4,601,082",
-            "4_estrellas": "15,810,857",
-            "5_estrellas": "3,584,613",
-            "hoteles": "24,625,987",
-            "extrahoteleros": "14,939,619",
-            "total": "39,565,606"
+            "1_estrella": "224217",
+            "2_estrellas": "405218",
+            "3_estrellas": "4601082",
+            "4_estrellas": "15810857",
+            "5_estrellas": "3584613",
+            "hoteles": "24625987",
+            "extrahoteleros": "14939619",
+            "total": "39565606"
         },
         {
             "año": "2014",

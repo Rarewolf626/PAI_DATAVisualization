@@ -13,44 +13,36 @@
  * @see {@link https://github.com/ULL-ESIT-PAI-2022-2023/2022-2023-pai-data-visualization}
  */
 
- 'use strict';
+'use strict';
 
- /** @desc import AEMET dataset and remove last element */
- import { PECNOCTATIONS } from '../../JSON/pecnoctaciones.js';
- const PECNOCTATIONS_DATA = PECNOCTATIONS.slice(0, -1);
- 
- /** @desc Obtain the number of rainy days in every month */
- let data = [];
- for (let pecnoctation of PECNOCTATIONS_DATA) {
-   data.push(pecnoctation.total);
- }
- 
- /**@desc labels for the columns representing each month */
- const YEARS = [
-   '1932',
-   '1937',
-   '2011',
-   '2012',
-   '2013',
-   '2015',
-   '2019'
- ];
- let years = new Set();
- for (let pecnoctation of PECNOCTATIONS_DATA) {
-   years.add(pecnoctation.año);
- }
+/** @desc Importing pecnoctations dataset */
+import { PECNOCTATIONS } from '../../JSON/pecnoctaciones.js';
+const PECNOCTATIONS_DATA = PECNOCTATIONS.slice();
 
- years = Array.from(years).reverse()
- 
- 
- /** @desc Data for the configuration of the chart */
- export const DATA = {
-   labels: years,
-   datasets: [{
-     label: 'Total pecnoctations throughout the years',
-     data: data,
-     fill: false,
+/**@desc Getting the labels and the data for every year */
+let data_map = new Map();
+let years = new Set();
+for (let pecnoctation of PECNOCTATIONS_DATA) {
+  years.add(pecnoctation.año);
+  data_map.set(pecnoctation.año, ((data_map.get(pecnoctation.año) ?? 0) + Number(pecnoctation.total)));
+}
+
+years = Array.from(years).reverse()
+
+let data = []
+data_map.forEach((_value, key) => {
+  data.push(data_map.get(key))
+})
+data.reverse()
+
+/** @desc Data for the configuration of the chart */
+export const DATA = {
+  labels: years,
+  datasets: [{
+    label: 'Total pecnoctations throughout the years',
+    data: data,
+    fill: false,
       borderColor: 'rgb(75, 192, 192)',
       tension: 0.1
-   }]
- };
+  }]
+};
