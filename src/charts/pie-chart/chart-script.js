@@ -8,27 +8,16 @@
  * @author Raimon José Mejías Hernández  <raimon.mejias.35@ull.edu.es>
  * @since Mar 30 2023
  * 
- * @desc Configuration for the line chart
+ * @desc Displays the data as a pie chart
  *       
  * @see {@link https://github.com/ULL-ESIT-PAI-2022-2023/2022-2023-pai-data-visualization}
  */
 
 'use strict';
 
-import { DATA } from './setup.js';
+import { CONFIG } from './config.js';
+import { Chart, registerables } from '../../../node_modules/chart.js/dist/chart.esm.js';
+Chart.register(...registerables);
 
-/** @desc Type of the chart to represent */
-const TYPE = 'line';
-
-/** @desc Configuration of the chart */
-export const CONFIG = {
-  type: TYPE,
-  data: DATA,
-  options: {
-    scales: {
-      y: {min: 20000000, max: 90000000, ticks: {font: {size: 10}, stepSize: 10000000}},
-      x: {ticks: {font: {size:10}}, reverse: true}
-    },
-    tension: 0.1
-  }
-};
+let CTX = document.getElementById("myChart").getContext("2d");
+let myChart = new Chart(CTX, CONFIG);
