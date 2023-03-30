@@ -8,22 +8,16 @@
  * @author Raimon José Mejías Hernández  <raimon.mejias.35@ull.edu.es>
  * @since Mar 30 2023
  * 
- * @desc Configuration for the pie chart
+ * @desc Displays the data as a pie chart
  *       
  * @see {@link https://github.com/ULL-ESIT-PAI-2022-2023/2022-2023-pai-data-visualization}
  */
 
 'use strict';
 
-import { DATA } from './setup.js';
+import { CONFIG } from './config.js';
+import { Chart, registerables } from '../../../node_modules/chart.js/dist/chart.esm.js';
+Chart.register(...registerables);
 
-const TYPE = 'pie';
-
-export const CONFIG = {
-  type: TYPE,
-  data: DATA,
-  options: {
-    responsive: true,
-    maintainAspectRatio: false
-  }
-};
+let CTX = document.getElementById("myChart").getContext("2d");
+let myChart = new Chart(CTX, CONFIG);

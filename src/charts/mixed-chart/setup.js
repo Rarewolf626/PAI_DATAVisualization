@@ -8,7 +8,7 @@
  * @author Raimon José Mejías Hernández  <raimon.mejias.35@ull.edu.es>
  * @since Mar 30 2023
  * 
- * @desc Configuration for the pie chart
+ * @desc Configuration for the mixed chart
  *       
  * @see {@link https://github.com/ULL-ESIT-PAI-2022-2023/2022-2023-pai-data-visualization}
  */
@@ -17,18 +17,22 @@
 
 export const DATA = {
   labels: [
-    'Red',
-    'Blue',
-    'Yellow'
+    'January',
+    'February',
+    'March',
+    'April'
   ],
   datasets: [{
-    label: 'Pie Chart',
-    data: [300, 50, 100],
-    backgroundColor: [
-      'rgb(255, 99, 132)',
-      'rgb(54, 162, 235)',
-      'rgb(255, 205, 86)'
-    ],
-    hoverOffset: 4
+    type: 'bar',
+    label: 'Bar Dataset',
+    data: [10, 20, 30, 40],
+    borderColor: 'rgb(255, 99, 132)',
+    backgroundColor: 'rgba(255, 99, 132, 0.2)'
+  }, {
+    type: 'line',
+    label: 'Line Dataset',
+    data: [50, 20, 40, 30],
+    fill: false,
+    borderColor: 'rgb(54, 162, 235)'
   }]
 };
