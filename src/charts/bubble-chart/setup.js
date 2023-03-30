@@ -8,24 +8,25 @@
  * @author Raimon José Mejías Hernández  <raimon.mejias.35@ull.edu.es>
  * @since Mar 30 2023
  * 
- * @desc Configuration for the pie chart
+ * @desc Configuration for the bubble chart
  *       
  * @see {@link https://github.com/ULL-ESIT-PAI-2022-2023/2022-2023-pai-data-visualization}
  */
 
 'use strict';
 
-import { DATA } from './setup.js';
-
-const TYPE = 'pie';
-
-const OPTIONS = {
-  responsive: true,
-  maintainAspectRatio: false
-}
-
-export const CONFIG = {
-  type: TYPE,
-  data: DATA,
-  options: OPTIONS
+export const DATA = {
+  datasets: [{
+    label: 'First Dataset',
+    data: [{
+      x: 20,
+      y: 30,
+      r: 25
+    }, {
+      x: 40,
+      y: 10,
+      r: 10
+    }],
+    backgroundColor: 'rgb(255, 99, 132)'
+  }]
 };

@@ -8,7 +8,7 @@
  * @author Raimon José Mejías Hernández  <raimon.mejias.35@ull.edu.es>
  * @since Mar 30 2023
  * 
- * @desc Displays the data as a pie chart
+ * @desc Displays the data as a mixed chart
  *       
  * @see {@link https://github.com/ULL-ESIT-PAI-2022-2023/2022-2023-pai-data-visualization}
  */

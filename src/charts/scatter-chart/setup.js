@@ -8,24 +8,29 @@
  * @author Raimon José Mejías Hernández  <raimon.mejias.35@ull.edu.es>
  * @since Mar 30 2023
  * 
- * @desc Configuration for the pie chart
+ * @desc Configuration for the scatter chart
  *       
  * @see {@link https://github.com/ULL-ESIT-PAI-2022-2023/2022-2023-pai-data-visualization}
  */
 
 'use strict';
 
-import { DATA } from './setup.js';
-
-const TYPE = 'pie';
-
-const OPTIONS = {
-  responsive: true,
-  maintainAspectRatio: false
-}
-
-export const CONFIG = {
-  type: TYPE,
-  data: DATA,
-  options: OPTIONS
+export const DATA = {
+  datasets: [{
+    label: 'Scatter Dataset',
+    data: [{
+      x: -10,
+      y: 0
+    }, {
+      x: 0,
+      y: 10
+    }, {
+      x: 10,
+      y: 5
+    }, {
+      x: 0.5,
+      y: 5.5
+    }],
+    backgroundColor: 'rgb(255, 99, 132)'
+  }],
 };
