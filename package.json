@@ -1,7 +1,15 @@
 {
+  "name": "2022-2023-data-visualization",
+  "author": "Raimon Mejías Hernández, Eva Peso Adán",
+  "scripts": {
+    "compile": "tsc"
+  },
   "dependencies": {
     "chart.js": "^3.7.1",
-    "express": "^4.17.1"
+    "@types/chart.js": "2.9.37",
+    "express": "^4.17.1",
+    "typescript": "^4.9.5",
+    "ts-node": "^10.9.1"
   },
   "type": "module"
  }
