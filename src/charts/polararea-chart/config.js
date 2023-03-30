@@ -19,11 +19,13 @@ import { DATA } from './setup.js';
 
 const TYPE = 'polarArea';
 
+const OPTIONS = {
+  responsive: true,
+  maintainAspectRatio: false
+}
+
 export const CONFIG = {
   type: TYPE,
   data: DATA,
-  options: {
-    responsive: true,
-    maintainAspectRatio: false
-  }
+  options: OPTIONS
 };

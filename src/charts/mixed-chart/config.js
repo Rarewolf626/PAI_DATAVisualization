@@ -19,16 +19,18 @@ import { DATA } from './setup.js';
 
 const TYPE = 'scatter';
 
+const OPTIONS = {
+  responsive: true,
+  maintainAspectRatio: false,
+  scales: {
+    y: {
+      beginAtZero: true
+    }
+  }
+}
+
 export const CONFIG = {
   type: TYPE,
   data: DATA,
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    scales: {
-      y: {
-        beginAtZero: true
-      }
-    }
-  }
+  options: OPTIONS
 };
