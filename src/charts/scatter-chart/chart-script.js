@@ -19,5 +19,5 @@ import { CONFIG } from './config.js';
 import { Chart, registerables } from '../../../node_modules/chart.js/dist/chart.esm.js';
 Chart.register(...registerables);
 
-let CTX = document.getElementById("myChart").getContext("2d");
-let myChart = new Chart(CTX, CONFIG);
+const CONTEXT = document.getElementById("myChart").getContext("2d");
+let myChart = new Chart(CONTEXT, CONFIG);

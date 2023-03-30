@@ -13,12 +13,10 @@
  * @see {@link https://github.com/ULL-ESIT-PAI-2022-2023/2022-2023-pai-data-visualization}
  */
 
-'use strict';
-
-import { CONFIG } from './config.js';
-import { Chart, registerables } from '../../../node_modules/chart.js/dist/chart.esm.js';
-
-Chart.register(...registerables);
-
-const CONTEXT = document.getElementById("myChart").getContext("2d");
-let myChart = new Chart(CONTEXT, CONFIG);
+ import { CONFIG } from './config.js';
+ import { Chart, registerables } from '../../../node_modules/chart.js/dist/chart.esm.js';
+ 
+ Chart.register(...registerables);
+ 
+ const CONTEXT = document.getElementById("myChart")!.getContext("2d");
+ let myChart = new Chart(CONTEXT, CONFIG);
