@@ -16,15 +16,15 @@
 'use strict';
 
 /** @desc Importing pecnoctations dataset */
-import { PECNOCTATIONS } from '../../JSON/pecnoctaciones.js';
-const PECNOCTATIONS_DATA = PECNOCTATIONS.slice();
+import { PERNOCTATIONS } from '../../data/pernoctaciones.js';
+const PERNOCTATIONS_DATA = PERNOCTATIONS.slice();
 
 /**@desc Getting the labels and the data for every year */
 let data_map = new Map();
 let years = new Set();
-for (let pecnoctation of PECNOCTATIONS_DATA) {
-  years.add(pecnoctation.año);
-  data_map.set(pecnoctation.año, ((data_map.get(pecnoctation.año) ?? 0) + Number(pecnoctation.total)));
+for (let pernoctation of PERNOCTATIONS_DATA) {
+  years.add(pernoctation.año);
+  data_map.set(pernoctation.año, ((data_map.get(pernoctation.año) ?? 0) + Number(pernoctation.total)));
 }
 
 years = Array.from(years)
@@ -38,7 +38,7 @@ data_map.forEach((_value, key) => {
 export const DATA = {
   labels: years,
   datasets: [{
-    label: 'Total pecnoctations throughout the years',
+    label: 'Total percnoctations in hotels in Tenerife throughout the years',
     data: data,
     fill: false,
     borderColor: 'rgb(75, 192, 192)'

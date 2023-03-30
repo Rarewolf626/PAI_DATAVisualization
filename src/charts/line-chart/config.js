@@ -20,15 +20,16 @@ import { DATA } from './setup.js';
 /** @desc Type of the chart to represent */
 const TYPE = 'line';
 
+const OPTIONS = {
+  scales: {
+    y: {min: 20000000, max: 90000000, ticks: {font: {size: 10}, stepSize: 10000000}},
+    x: {ticks: {font: {size:10}}, reverse: true}
+  },
+  tension: 0.1
+}
 /** @desc Configuration of the chart */
 export const CONFIG = {
   type: TYPE,
   data: DATA,
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true
-      }
-    }
-  }
+  options: OPTIONS
 };
