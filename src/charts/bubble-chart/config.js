@@ -8,16 +8,22 @@
  * @author Raimon José Mejías Hernández  <raimon.mejias.35@ull.edu.es>
  * @since Mar 30 2023
  * 
- * @desc Displays the data as a mixed chart
+ * @desc Configuration for the bubble chart
  *       
  * @see {@link https://github.com/ULL-ESIT-PAI-2022-2023/2022-2023-pai-data-visualization}
  */
 
 'use strict';
 
-import { CONFIG } from './config.js';
-import { Chart, registerables } from '../../../node_modules/chart.js/dist/chart.esm.js';
-Chart.register(...registerables);
+import { DATA } from './setup.js';
 
-let CTX = document.getElementById("myChart").getContext("2d");
-let myChart = new Chart(CTX, CONFIG);
+const TYPE = 'bubble';
+
+export const CONFIG = {
+  type: TYPE,
+  data: DATA,
+  options: {
+    responsive: true,
+    maintainAspectRatio: false
+  }
+};
