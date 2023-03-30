@@ -23,5 +23,12 @@ const TYPE = 'line';
 /** @desc Configuration of the chart */
 export let CONFIG = {
   type: TYPE,
-  data: DATA
+  data: DATA,
+  options: {
+    scales: {
+      y: {min: 20000000, max: 90000000, ticks: {font: {size: 10}, stepSize: 10000000}},
+      x: {ticks: {font: {size:10}}, reverse: true}
+    },
+    tension: 0.1
+  }
 };

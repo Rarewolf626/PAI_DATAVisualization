@@ -27,13 +27,12 @@ for (let pecnoctation of PECNOCTATIONS_DATA) {
   data_map.set(pecnoctation.año, ((data_map.get(pecnoctation.año) ?? 0) + Number(pecnoctation.total)));
 }
 
-years = Array.from(years).reverse()
+years = Array.from(years)
 
 let data = []
 data_map.forEach((_value, key) => {
   data.push(data_map.get(key))
 })
-data.reverse()
 
 /** @desc Data for the configuration of the chart */
 export const DATA = {
@@ -42,7 +41,6 @@ export const DATA = {
     label: 'Total pecnoctations throughout the years',
     data: data,
     fill: false,
-      borderColor: 'rgb(75, 192, 192)',
-      tension: 0.1
-  }]
+    borderColor: 'rgb(75, 192, 192)'
+  }],
 };
