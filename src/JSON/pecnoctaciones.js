@@ -1,6 +1,4 @@
-{
-    "DATOS": [
-        {
+export const PECNOCTATIONS = [ {
             "año": "2019",
             "mes": "3",
             "1_estrella": "23974",
@@ -6432,13 +6430,4 @@
             "extrahoteleros": "476649",
             "total": "1274426"
         }
-    ],
-    "Notas": [
-        {
-            "Notas:": "Se entiende por pernoctación o plaza ocupada a la noche que un viajero se aloja en un establecimiento. "
-        },
-        {
-            "Notas:": "Fuente: Estadísticas de Turismo Receptivo de Tenerife. Cabildo de Tenerife."
-        }
     ]
-}
