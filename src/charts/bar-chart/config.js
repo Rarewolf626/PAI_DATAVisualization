@@ -14,8 +14,6 @@
  */
 'use strict';
 
-import {  ChartType } from 'chart.js';
-
 import { DATA } from './setup.js';
 
 const TYPE = 'bar'; // Contains the type of the Chart, in this case is a Bar Chart
