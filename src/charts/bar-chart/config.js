@@ -14,6 +14,8 @@
  */
 'use strict';
 
+import {  ChartType } from 'chart.js';
+
 import { DATA } from './setup.js';
 
 const TYPE = 'bar';
@@ -21,13 +23,5 @@ const TYPE = 'bar';
 export const CONFIG = {
   type: TYPE,
   data: DATA,
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    scales: {
-      y: {
-        beginAtZero: true
-      }
-    }
-  }
+
 };

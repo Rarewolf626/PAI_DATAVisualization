@@ -21,8 +21,22 @@ import { DATA } from './setup.js';
 const TYPE = 'line';
 
 const OPTIONS = {
+  scales: {
+    y: {min: 20000000, max: 90000000, ticks: {font: {size: 10}, stepSize: 10000000}},
+    x: {ticks: {font: {size:10}}, reverse: true}
+  },
+  tension: 0.1,
   responsive: true,
-  maintainAspectRatio: false
+  maintainAspectRatio: false,
+  animations: {
+    tension: {
+      duration: 500,
+      easing: 'linear',
+      from: 0.5,
+      to: 0.1,
+      loop: true,
+    }
+  },
 }
 /** @desc Configuration of the chart */
 export const CONFIG = {

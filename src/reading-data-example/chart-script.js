@@ -8,25 +8,16 @@
  * @author Raimon José Mejías Hernández  <raimon.mejias.35@ull.edu.es>
  * @since Mar 30 2023
  * 
- * @desc Configuration for the line chart
+ * @desc Displays the data as a line chart
  *       
  * @see {@link https://github.com/ULL-ESIT-PAI-2022-2023/2022-2023-pai-data-visualization}
  */
 
 'use strict';
 
-import { DATA } from './setup.js';
+import { CONFIG } from './config.js';
+import { Chart, registerables } from '../../node_modules/chart.js/dist/chart.esm.js';
+Chart.register(...registerables);
 
-/** @desc Type of the chart to represent */
-const TYPE = 'line';
-
-const OPTIONS = {
-  responsive: true,
-  maintainAspectRatio: false
-}
-/** @desc Configuration of the chart */
-export const CONFIG = {
-  type: TYPE,
-  data: DATA,
-  options: OPTIONS
-};
+const CONTEXT = document.getElementById("myChart").getContext("2d");
+let myChart = new Chart(CONTEXT, CONFIG);

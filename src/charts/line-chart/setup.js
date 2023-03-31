@@ -15,31 +15,12 @@
 
 'use strict';
 
-/** @desc Importing pecnoctations dataset */
-import { PERNOCTATIONS } from '../../data/pernoctaciones.js';
-const PERNOCTATIONS_DATA = PERNOCTATIONS.slice();
-
-/**@desc Getting the labels and the data for every year */
-let data_map = new Map();
-let years = new Set();
-for (let pernoctation of PERNOCTATIONS_DATA) {
-  years.add(pernoctation.año);
-  data_map.set(pernoctation.año, ((data_map.get(pernoctation.año) ?? 0) + Number(pernoctation.total)));
-}
-
-years = Array.from(years)
-
-let data = []
-data_map.forEach((_value, key) => {
-  data.push(data_map.get(key))
-})
-
 /** @desc Data for the configuration of the chart */
 export const DATA = {
-  labels: years,
+  labels: ['January', 'February', 'March', 'April', 'May' ],
   datasets: [{
-    label: 'Total percnoctations in hotels in Tenerife throughout the years',
-    data: data,
+    label: 'Some data',
+    data: [65, 59, 80, 81, 56],
     fill: false,
     borderColor: 'rgb(75, 192, 192)'
   }],
