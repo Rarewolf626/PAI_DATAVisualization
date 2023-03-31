@@ -15,7 +15,7 @@
     "noImplicitAny": true,                     /* will issue an error whenever it would have inferred any:*/ 
     "noFallthroughCasesInSwitch": true,        /* Report errors for fallthrough cases in switch statement */
     "noImplicitReturns": true,                 /* Report error when not all code paths in function return a value */
-    "noUnusedLocals": true,                    /* Report errors on unused local variables */
+    "noUnusedLocals": false,                    /* Report errors on unused local variables */
     "forceConsistentCasingInFileNames": true,  /* Force all file names to have the same case style */
   },
   "exclude": [
@@ -26,6 +26,6 @@
         "public"
   ],
   "files": [
-    /* ficheros */
+    "src/charts/bar-chart/chart-script.ts"
   ]
 }
