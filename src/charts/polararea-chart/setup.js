@@ -16,22 +16,25 @@
 'use strict';
 
 export const DATA = {
-  labels: [
+  labels: [ // Names that will be show above the PolarArea chart
     'Red',
     'Green',
     'Yellow',
     'Grey',
     'Blue'
   ],
-  datasets: [{
-    label: 'My First Dataset',
-    data: [11, 16, 7, 3, 14],
-    backgroundColor: [
+  datasets: [{ // Array of object of type CharData
+    label: 'My First Dataset', // name that will be show in the legend
+    data: [11, 16, 7, 3, 14], // Only accepts Number[]
+    backgroundColor: [ // The color of each segment in the chart
       'rgb(255, 99, 132)',
       'rgb(75, 192, 192)',
       'rgb(255, 205, 86)',
       'rgb(201, 203, 207)',
       'rgb(54, 162, 235)'
-    ]
+    ],
+    borderColor: 'black', // The Color of the border lines
+    borderWitdh: 1, // The thickness of the boder lines
+    hoverOffset: 4  // A Segment Animation 
   }]
 };

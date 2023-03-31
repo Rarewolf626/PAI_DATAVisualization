@@ -17,16 +17,19 @@
 
 export const DATA = {
   datasets: [{
-    label: 'First Dataset',
-    data: [{
-      x: 20,
-      y: 30,
-      r: 25
+    label: 'First Dataset', // name that will show in the legend
+    data: [{ // An array of objects  { x: number, y: number, r:number}
+      x: 20, // X position in the chart
+      y: 30, // Y position in the chart
+      r: 25  // The radius of the circle in the chart
     }, {
       x: 40,
       y: 10,
       r: 10
     }],
-    backgroundColor: 'rgb(255, 99, 132)'
+    backgroundColor: 'rgb(255, 99, 132)', // The color inside the circle
+    borderColor: 'rgb(255, 99, 132)', // The color of the circle border
+    pointSyle: 'circle' // The style of the dots in the chart
+    // It can be change to cross, line, rect, triangle, star, etc.
   }]
 };

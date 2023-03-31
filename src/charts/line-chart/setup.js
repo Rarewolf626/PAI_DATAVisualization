@@ -36,11 +36,13 @@ data_map.forEach((_value, key) => {
 
 /** @desc Data for the configuration of the chart */
 export const DATA = {
-  labels: years,
-  datasets: [{
-    label: 'Total percnoctations in hotels in Tenerife throughout the years',
-    data: data,
-    fill: false,
-    borderColor: 'rgb(75, 192, 192)'
+  labels: years, // names that will show in the legend
+  datasets: [{ // Array of objects of type ChartData
+    label: 'Total percnoctations in hotels in Tenerife throughout the years', // names that will show in the legend
+    data: data, // object|object[]|number[]|string[]
+    fill: false, // If true, fills the area under the line
+    borderColor: 'rgb(75, 192, 192)',  // line color
+    backgroundColor: 'rgb(75, 192, 192)' , // Color of the are under the line
+    borderWidth: 1 // Changes the size of the line 
   }],
 };

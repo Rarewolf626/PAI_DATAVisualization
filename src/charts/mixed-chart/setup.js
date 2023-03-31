@@ -16,23 +16,23 @@
 'use strict';
 
 export const DATA = {
-  labels: [
+  labels: [ // Names that are going to be shown in the Y axis.
     'January',
     'February',
     'March',
     'April'
   ],
-  datasets: [{
-    type: 'bar',
-    label: 'Bar Dataset',
-    data: [10, 20, 30, 40],
-    borderColor: 'rgb(255, 99, 132)',
-    backgroundColor: 'rgba(255, 99, 132, 0.2)'
+  datasets: [{ // Array of Objects of type ChartData
+    type: 'bar', // The type of the chart
+    label: 'Bar Dataset', // Name that are going to be shown in the legend.
+    data: [10, 20, 30, 40], // The value of the data 
+    borderColor: 'rgb(255, 99, 132)', // An Array of Colors for each Bar in the Chart. This color represent the inside of each bar
+    backgroundColor: 'rgba(255, 99, 132, 0.2)'  // An Array of Colors for each Bar in the Chart. This color represent the lines of each bar
   }, {
-    type: 'line',
-    label: 'Line Dataset',
-    data: [50, 20, 40, 30],
-    fill: false,
-    borderColor: 'rgb(54, 162, 235)'
+    type: 'line', // The type of the chart
+    label: 'Line Dataset', // Name that are going to be shown in the legend.
+    data: [50, 20, 40, 30], // The value of the data
+    fill: false, // If true, fills the area under the line
+    borderColor: 'rgb(54, 162, 235)' // line color
   }]
 };

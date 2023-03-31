@@ -9,11 +9,13 @@ const data = [
 ];
 
 export const DATA = {
-  labels: data.map((row) => { return row.year; }),
-  datasets: [{
-    label: 'Acquisitions by year',
-    data: data.map((row) => { return row.count; }),
-    backgroundColor: data.map(() => `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.5)`),
-    borderColor: data.map(() => `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.5)`),
+  labels: data.map((row) => { return row.year; }), // Names that are going to be shown in the Y axis.
+  datasets: [{ // An array of DataChart objects containing the basic information for the chart
+    label: 'Acquisitions by year', // The name that will appear in the legend
+    data: data.map((row) => { return row.count; }), // An array of Objects, Numbers or Strings
+    backgroundColor: // An Array of Colors for each Bar in the Chart. This color represent the inside of each bar
+        data.map(() => `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.5)`), 
+    borderColor:    // An Array of Colors for each Bar in the Chart. This color represent the lines of each bar
+        data.map(() => `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.5)`),
   }],
 };

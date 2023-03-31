@@ -17,10 +17,10 @@
 
 export const DATA = {
   datasets: [{
-    label: 'Scatter Dataset',
-    data: [{
-      x: -10,
-      y: 0
+    label: 'Scatter Dataset', // Name that will be shown in the legend
+    data: [{ // An array of objects {X: number, y: number}
+      x: -10, // The X position of the point
+      y: 0    // The y position of the point
     }, {
       x: 0,
       y: 10
@@ -31,6 +31,9 @@ export const DATA = {
       x: 0.5,
       y: 5.5
     }],
-    backgroundColor: 'rgb(255, 99, 132)'
+    backgroundColor: 'rgb(255, 99, 132)', // The color of the are inside the circle
+    borderColor: 'rgb(255, 99, 132)', // The color of the circle border
+    pointSyle: 'circle' // The style of the dots in the chart
+    // It can be change to cross, line, rect, triangle, star, etc.
   }],
 };

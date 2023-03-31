@@ -17,15 +17,16 @@
 
 import { DATA } from './setup.js';
 
-const TYPE = 'polarArea';
+const TYPE = 'polarArea'; // Contains the type of the Chart, in this case is a Polar Area Chart
 
 const OPTIONS = {
-  responsive: true,
-  maintainAspectRatio: false
+  responsive: true,  // Respond to size changes in the canvas
+  maintainAspectRatio: false, // Desactive the AspectRatio
 }
 
+/** @desc Configuration of the chart */
 export const CONFIG = {
-  type: TYPE,
-  data: DATA,
-  options: OPTIONS
+  type: TYPE, // The type of the chart
+  data: DATA, // The data that is going to be displayed
+  options: OPTIONS // All other options of the chart, It can set data options in all DataSets
 };

@@ -16,19 +16,21 @@
 'use strict';
 
 export const DATA = {
-  labels: [
+  labels: [ // Names that will be show above the pie chart
     'Red',
     'Blue',
     'Yellow'
   ],
-  datasets: [{
-    label: 'Pie Chart',
-    data: [300, 50, 100],
-    backgroundColor: [
+  datasets: [{ // Array of objectos of type ChartData
+    label: 'Pie Chart', // Name that will show in the legend
+    data: [300, 50, 100], // The data only accept number[]
+    backgroundColor: [ // Array of Colors of each segment in the are inside the Pie 
       'rgb(255, 99, 132)',
       'rgb(54, 162, 235)',
       'rgb(255, 205, 86)'
     ],
-    hoverOffset: 4
+    borderColor: 'black', // The Color of the border lines
+    borderWitdh: 1, // The thickness of the boder lines
+    hoverOffset: 4  // A Segment Animation 
   }]
 };

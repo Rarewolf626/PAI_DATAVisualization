@@ -16,7 +16,7 @@
 'use strict';
 
 export const DATA = {
-  labels: [
+  labels: [ // Names that will shown all aroun the chart
     'Eating',
     'Drinking',
     'Sleeping',
@@ -25,25 +25,27 @@ export const DATA = {
     'Cycling',
     'Running'
   ],
-  datasets: [{
-    label: 'During exam season',
-    data: [45, 39, 5, 90, 90, 10, 10],
-    fill: true,
-    backgroundColor: 'rgba(255, 99, 132, 0.2)',
-    borderColor: 'rgb(255, 99, 132)',
-    pointBackgroundColor: 'rgb(255, 99, 132)',
-    pointBorderColor: '#fff',
-    pointHoverBackgroundColor: '#fff',
-    pointHoverBorderColor: 'rgb(255, 99, 132)'
-  }, {
-    label: 'During vacations',
-    data: [70, 70, 90, 0, 10, 78, 60],
-    fill: true,
-    backgroundColor: 'rgba(54, 162, 235, 0.2)',
-    borderColor: 'rgb(54, 162, 235)',
-    pointBackgroundColor: 'rgb(54, 162, 235)',
-    pointBorderColor: '#fff',
-    pointHoverBackgroundColor: '#fff',
-    pointHoverBorderColor: 'rgb(54, 162, 235)'
+  datasets: [{ // Array of object of type ChartData
+    label: 'During exam season', // Name that will be shown in the legend
+    data: [45, 39, 5, 90, 90, 10, 10], // Only accepts Number[]
+    fill: true, // If true, fill the are inside the lines
+    backgroundColor: 'rgba(255, 99, 132, 0.2)', // The color of the are inside the lines
+    borderColor: 'rgb(255, 99, 132)', // The Color of the border line 
+    pointBackgroundColor: 'rgb(255, 99, 132)', // The color of the are inside the Point
+    pointBorderColor: '#rgb(255, 99, 132)', // The color of the border lines of the Point 
+    tension: 0.2, // The curve of the lines
+    borderWidth: 1, // The thickness of the lines
+
+  }, 
+  {
+    label: 'During vacations',  // Name that will be shown in the legend
+    data: [70, 70, 90, 0, 10, 78, 60], // Only accepts Number[]
+    fill: true, // If true, fill the are inside the lines
+    backgroundColor: 'rgba(54, 162, 235, 0.2)', // The color of the are inside the lines
+    borderColor: 'rgb(54, 162, 235)', // The Color of the border line 
+    pointBackgroundColor: 'rgb(54, 162, 235)', // The color of the are inside the Point
+    pointBorderColor: '#rgb(54, 162, 235)', // The color of the border lines of the Point 
+    tension: 0.2, // The curve of the lines
+    borderWidth: 1, // The thickness of the lines
   }]
 };

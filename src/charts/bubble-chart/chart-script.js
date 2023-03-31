@@ -19,5 +19,14 @@ import { CONFIG } from './config.js';
 import { Chart, registerables } from '../../../node_modules/chart.js/dist/chart.esm.js';
 Chart.register(...registerables);
 
-let CTX = document.getElementById("myChart").getContext("2d");
-let myChart = new Chart(CTX, CONFIG);
+/**
+ * @desc the main function of the program
+ * it gets the canvas and creates the chart 
+ */
+function main() {
+  let CTX = document.getElementById("myChart").getContext("2d"); // Get the HTMLCanvasElement from the HTML file
+  let myChart = new Chart(CTX, CONFIG); // Creates the new Chart object
+  myChart.render(); // Renders the Chart 
+}
+
+main();

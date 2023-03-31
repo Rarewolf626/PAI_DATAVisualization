@@ -16,17 +16,19 @@
 
 import { DATA } from './setup.js';
 
-const TYPE = 'bar';
+const TYPE = 'bar'; // Contains the type of the Chart, in this case is a Bar Chart
 
+/** @desc Configuration of the chart */
 export const CONFIG = {
-  type: TYPE,
-  data: DATA,
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
+  type: TYPE, // The type of the chart
+  data: DATA, // The data that is going to be displayed
+  options: { // All other options of the chart, It can set data options in all DataSets
+    responsive: true, // Respond to size changes in the canvas
+    maintainAspectRatio: false, // Desactive the AspectRatio
+    indexAxis: 'x', // Change it to y to make a horizontal bar Chart
     scales: {
       y: {
-        beginAtZero: true
+        beginAtZero: true // It makes the chart begin from 0 instead of the min value of the data
       }
     }
   }
