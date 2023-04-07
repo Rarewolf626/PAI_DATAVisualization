@@ -17,19 +17,28 @@
 
 import { DATA } from './setup.js';
 
-const TYPE = 'bubble'; // Contains the type of the Chart, in this case is a Bubble Chart
+/** 
+ * @desc Type of the chart to represent
+ * Contains the type of the Chart, in this case is a bubble Chart
+ */
+const TYPE = 'bubble'; 
 
 /**
- * @desc Stores the options for of the chart 
+ * @desc  The general options of the bar chart, 
+ * includes chart specific options like resposive or the aspecRatio but can have
+ * Data options, this options are set to all Data objects in the Chart
  */
 const OPTIONS = {
-  responsive: true,  // Respond to size changes in the canvas
+  responsive: true,          // Respond to size changes in the canvas
   maintainAspectRatio: false // Desactive the AspectRatio
 }
 
-/** @desc Configuration of the chart */
+/** 
+ * @desc Configuration of the chart 
+ * It contains all the necessary information for the BarChart to work
+ */
 export const CONFIG = {
-  type: TYPE, // The type of the chart
-  data: DATA, // The data that is going to be displayed
+  type: TYPE,      // The type of the chart
+  data: DATA,      // The data that is going to be displayed
   options: OPTIONS // All other options of the chart, It can set data options in all DataSets
 };

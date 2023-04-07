@@ -16,7 +16,10 @@
 
 import { DATA } from './setup.js';
 
-/** @desc Contains the type of the Chart, in this case is a Bar Chart */
+/** 
+ * @desc Type of the chart to represent
+ * Contains the type of the Chart, in this case is a bar Chart
+ */
 const TYPE = 'bar';
 
 /**

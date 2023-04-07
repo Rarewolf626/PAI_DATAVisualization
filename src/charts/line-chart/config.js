@@ -50,10 +50,24 @@ const OPTIONS = {
       reverse: true // Display the information from the last DataObject to the first one
     }
   },
-  tension: 0.5 // Represent the curve of the line can be more than 1, but is discouraged
+  tension: 0.5, // Represent the curve of the line can be more than 1, but is discouraged
+  /* If uncommented the line chart will have a little animation that change the tension from 0.5 to 0.1
+  animations: {
+    tension: {
+      duration: 500,
+      easing: 'linear',
+      from: 0.5,
+      to: 0.1,
+      loop: true,
+    }
+  },
+  */
 }
 
-/** @desc Configuration of the chart */
+/** 
+ * @desc Configuration of the chart 
+ * It contains all the necessary information for the BarChart to work
+ */
 export const CONFIG = {
   type: TYPE, // The type of the chart
   data: DATA, // The data that is going to be displayed
