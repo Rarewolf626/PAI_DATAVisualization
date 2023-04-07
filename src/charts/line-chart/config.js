@@ -11,21 +11,30 @@
  * @desc Configuration for the line chart
  *       
  * @see {@link https://github.com/ULL-ESIT-PAI-2022-2023/2022-2023-pai-data-visualization}
+ * @see {@link https://www.chartjs.org/docs/latest/charts/line.html}
  */
 
 'use strict';
 
 import { DATA } from './setup.js';
 
-/** @desc Type of the chart to represent */
-const TYPE = 'line'; // Contains the type of the Chart, in this case is a Line Chart
+/** 
+ * @desc Type of the chart to represent
+ * Contains the type of the Chart, in this case is a Line Chart
+ */
+const TYPE = 'line'; // 
 
+/**
+ * @desc  The general options of the bar chart, 
+ * includes chart specific options like resposive or the aspecRatio but can have
+ * Data options, this options are set to all Data objects in the Chart
+ */
 const OPTIONS = {
   scales: {
     y: { 
-      min: 20000000, // It set the minium value to display in the Y Axis of the chart
+      min: 10000000, // It set the minium value to display in the Y Axis of the chart
       max: 90000000, // It set the maximum value to display in the Y Axis of the chart 
-      ticks: {
+      ticks: { // A tick is the value that is displayed in the axis 
         font: {
           size: 10 // Change the font size to 10px
         }, 
@@ -33,15 +42,15 @@ const OPTIONS = {
       }
     },
     x: {
-      ticks: {
+      ticks: { // A tick is the value that is displayed in the axis 
         font: {
           size: 10 // Change the font size to 10px
         }
       }, 
-      reverse: true
+      reverse: true // Display the information from the last DataObject to the first one
     }
   },
-  tension: 0.1 // Represent the curve of the line can be more than 1, but is discouraged
+  tension: 0.5 // Represent the curve of the line can be more than 1, but is discouraged
 }
 
 /** @desc Configuration of the chart */
