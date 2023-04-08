@@ -32,9 +32,9 @@ export const DATA = {
   datasets: [{                               // Array of object of type ChartData
     label: 'A defensive player',             // Name that will be shown in the legend
     data: [100, 15, 75, 10, 65, 5],          // Only accepts Number[]
-    fill: true,                              // If true, fill the are inside the lines
-    backgroundColor: TRANSPARENT_PINK,       // The color of the are inside the lines
-    borderColor: PINK,                       // The Color of the border line 
+    fill: true,                              // If true, fill the area inside the lines
+    backgroundColor: TRANSPARENT_PINK,       // The color of the area inside the lines
+    borderColor: PINK,                       // The color of the border line 
     pointBackgroundColor: 'black',           // The color of the are inside the Point
     pointBorderColor: 'black',               // The color of the border lines of the Point 
     tension: 0,                              // The curve of the lines can be more than 1, but is discourage
@@ -44,9 +44,9 @@ export const DATA = {
   {
     label: 'A standar player',               // Name that will be shown in the legend
     data: [50, 30, 20, 50, 10, 10],          // Only accepts Number[]
-    fill: true,                              // If true, fill the are inside the lines
-    backgroundColor: TRANSPARENT_DARK_GREEN, // The color of the are inside the lines
-    borderColor: DARK_GREEN,                 // The Color of the border line 
+    fill: true,                              // If true, fill the area inside the lines
+    backgroundColor: TRANSPARENT_DARK_GREEN, // The color of the area inside the lines
+    borderColor: DARK_GREEN,                 // The color of the border line 
     pointBackgroundColor: 'black',           // The color of the are inside the Point
     pointBorderColor: 'black',               // The color of the border lines of the Point 
     tension: 0,                              // The curve of the lines can be more than 1, but is discourage

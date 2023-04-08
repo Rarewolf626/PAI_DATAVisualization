@@ -22,14 +22,16 @@ import { DATA } from './setup.js';
  * @desc Type of the chart to represent
  * Contains the type of the Chart, in this case is a Line Chart
  */
-const TYPE = 'line'; // 
+const TYPE = 'line'; 
 
 /**
- * @desc  The general options of the bar chart, 
+ * @desc  The general options of the line chart, 
  * includes chart specific options like resposive or the aspecRatio but can have
  * Data options, this options are set to all Data objects in the Chart
  */
 const OPTIONS = {
+  responsive: true,  // Respond to size changes in the canvas
+  maintainAspectRatio: false, // Desactive the AspectRatio
   scales: {
     y: { 
       min: 10000000, // It set the minium value to display in the Y Axis of the chart
@@ -66,10 +68,10 @@ const OPTIONS = {
 
 /** 
  * @desc Configuration of the chart 
- * It contains all the necessary information for the BarChart to work
+ * It contains all the necessary information for the LineChart to work
  */
 export const CONFIG = {
-  type: TYPE, // The type of the chart
-  data: DATA, // The data that is going to be displayed
+  type: TYPE,      // The type of the chart
+  data: DATA,      // The data that is going to be displayed
   options: OPTIONS // All other options of the chart, It can set data options in all DataSets
 };

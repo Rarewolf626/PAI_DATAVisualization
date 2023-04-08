@@ -28,8 +28,8 @@ import { CONFIG } from './config.js';
  */
 function main() {
   const CONTEXT = document.getElementById("myChart").getContext("2d"); // Get the HTMLCanvasElement from the HTML file
-  let myChart = new Chart(CONTEXT, CONFIG); // Creates the new Chart object 
-  myChart.render(); // Renders the Chart
+  let myChart = new Chart(CONTEXT, CONFIG);                            // Creates the new Chart object 
+  myChart.render();                                                    // Renders the Chart
 }
 
 main();

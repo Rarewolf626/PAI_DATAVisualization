@@ -27,6 +27,11 @@ const OPTIONS = {
       type: 'linear', // Indicate the type of the CartesianAxis
       position: 'bottom'
     }
+  },
+  plugins: {
+    legend: {
+      display: false
+    }
   }
 }
 

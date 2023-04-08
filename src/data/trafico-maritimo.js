@@ -1,4 +1,4 @@
-{
+export const MARITIME_TRAFFIC = {
   "DATOS": [
       {
           "AMBITO": "Tenerife",

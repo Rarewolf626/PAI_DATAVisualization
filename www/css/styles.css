@@ -3,12 +3,12 @@ h1 {
 }
 
 body {
-  background: white;
+  background: rgb(255, 255, 255);
   color: blue;
 }
 
 .chart-container {
   position: relative;
-  height:720px;
-  width:95%;
+  height: 720px;
+  width: 100%;
 } 

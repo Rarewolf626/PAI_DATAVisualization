@@ -16,7 +16,6 @@
  */
 'use strict';
 
-// @desc Importing pecnoctations dataset
 import {PERNOCTATIONS} from '../../data/pernoctaciones.js';
 const PERNOCTATIONS_DATA = PERNOCTATIONS.slice();
 
@@ -27,23 +26,27 @@ for (let pernoctation of PERNOCTATIONS_DATA) {
   years.add(pernoctation.año);
   dataMap.set(pernoctation.año, ((dataMap.get(pernoctation.año) ?? 0) + Number(pernoctation.total)));
 }
-years = Array.from(years); // Transform the Set to an Array
-let chartDataArray = []; // Create a new Array that will contain the data that will be displayed
+years = Array.from(years);                               // Transform the Set to an Array
+let chartDataArray = [];                                 // Create a new Array that will contain the data that will be displayed
 for (let data of dataMap) { chartDataArray.push(data); } // Push the data from the map into an Array
 
 const LIGHT_BLUE = 'rgb(75, 192, 192)';
 
-/** @desc Data for the configuration of the chart */
+/**
+ * @desc A ChartData object that contains all the information
+ * that will be displayed in the Linechart, can have multiple options 
+ * for different datasets
+ */
 export const DATA = {
-  labels: years, // names that will show in the legend
-  datasets: [{ // Array of objects of type ChartData
+  labels: years,                                                              // names that will show in the legend
+  datasets: [{                                                                // Array of objects of type ChartData
     label: 'Total percnoctations in hotels in Tenerife throughout the years', // names that will show in the legend
-    data: chartDataArray, // object|object[]|number[]|string[]
-    fill: false, // If true, fills the area under the line
-    borderColor: LIGHT_BLUE,  // line color
-    backgroundColor: LIGHT_BLUE , // Color of the are under the line
-    pointBorderColor: 'red',
-    pointBackgroundColor: 'red',
-    borderWidth: 1 // Changes the size of the line 
+    data: chartDataArray,                                                     // object|object[]|number[]|string[]
+    fill: false,                                                              // If true, fills the area under the line
+    borderColor: LIGHT_BLUE,                                                  // line color
+    backgroundColor: LIGHT_BLUE ,                                             // Color of the area under the line
+    pointBorderColor: 'red',                                                  // Color of the line border of the point
+    pointBackgroundColor: 'red',                                              // Color of the point
+    borderWidth: 1                                                            // Changes the size of the line 
   }],
 };
