@@ -15,21 +15,19 @@
 
 'use strict';
 
-import { MARITIME_TRAFFIC } from '../../data/trafico-maritimo.js';
+import { BUDGET } from '../../data/presupuesto.js';
 
-let totalAmounfOfTraffic2016 = [];
-for (let data of MARITIME_TRAFFIC.DATOS) {  
-  if (data.PERIODO === '2016 TOTAL (p)') { 
-    totalAmounfOfTraffic2016.push(data);    // Select only the information that is from the total of 2016
-  }
+let budgedElements = [];
+for (let data of BUDGET) {
+  if (Number(data.previsionInicialEjercicio) > 5000000) { budgedElements.push(data); }
 }
-const COLORS = ['red', 'yellow', 'blue', 'green'];
-let traffic = []; // Array with all the total traffics for each port
-let labels = [];  // Array with the name of all ports
-for (let data of totalAmounfOfTraffic2016) {
-  let totalTraffic = Number(data.pasajeros_de_crucero) + Number(data.pasajeros_en_linea_regular);
-  labels.push(data.PUERTO); 
-  traffic.push(totalTraffic);
+let colors = [];
+let budgets= [];  // Array with all the total budgets
+let labels = [];  // Array with the name of the budgetElement
+for (let data of budgedElements) {
+  budgets.push(Number(data.previsionInicialEjercicio));
+  labels.push(data.clasificacionEconomica.label);
+  colors.push(`rgba(${Math.random() * 256}, ${Math.random() * 256} , ${Math.random() * 256}, 1)`); // Reddish colors
 }
 
 /**
@@ -40,8 +38,8 @@ for (let data of totalAmounfOfTraffic2016) {
 export const DATA = { 
   labels: labels,             // Names that will be show above the pie chart
   datasets: [{                // Array of DataSet objects
-    data: traffic,            // Set the displayed data with the information collected
-    backgroundColor: COLORS,  // Color inside each segment of the PieChart
+    data: budgets,            // Set the displayed data with the information collected
+    backgroundColor: colors,  // Color inside each segment of the PieChart
     hoverOffset: 10,          // How much the segment move away from the chart
     //borderColor: 'black',   // The Color of the border lines
     //borderWitdh: 2,         // The thickness of the boder lines

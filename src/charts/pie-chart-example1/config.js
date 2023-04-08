@@ -31,7 +31,17 @@ const TYPE = 'pie';
 const OPTIONS = {
   responsive: true,           // Respond to size changes in the canvas
   maintainAspectRatio: false, // Desactive the AspectRatio
-  cutout: '75%'               // The portion of the chart that is cut out of the middle. 
+  cutout: '0%',               // The portion of the chart that is cut out of the middle. 
+  plugins: {
+    title: {                  // Activate the Title of the chart
+      display: true,
+      color: 'black',
+      text: 'Usage comparations of Tenerife ports',
+      font: {
+        size: 30,
+      }
+    }
+  }
 }
 
 /** 

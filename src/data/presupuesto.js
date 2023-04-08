@@ -1,4 +1,4 @@
-export const PRESUPUESTO = [
+export const BUDGET = [
   {
     "previsionInicialEjercicio": "3909594.12",
     "id": "http://datos.alcobendas.org/recurso/hacienda/presupuestos/gasto/a33a14f0ba639b290aa413e23c69b552",

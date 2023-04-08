@@ -29,8 +29,18 @@ const TYPE = 'bubble';
  * Data options, this options are set to all Data objects in the Chart
  */
 const OPTIONS = {
-  responsive: true,          // Respond to size changes in the canvas
-  maintainAspectRatio: false // Desactive the AspectRatio
+  responsive: true,           // Respond to size changes in the canvas
+  maintainAspectRatio: false, // Desactive the AspectRatio
+  plugins: {
+    title: {                  // Activate the Title of the chart
+      display: true,
+      color: 'black',
+      text: 'Kmeans algorithm visualizer',
+      font: {
+        size: 30,
+      }
+    }
+  }
 }
 
 /** 

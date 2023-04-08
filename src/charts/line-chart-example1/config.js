@@ -64,6 +64,16 @@ const OPTIONS = {
     }
   },
   */
+  plugins: {
+    title: {                  // Activate the Title of the chart
+      display: true,
+      color: 'black',
+      text: 'Overnight stays in Tenerife',
+      font: {
+        size: 30,
+      }
+    }
+  }
 }
 
 /** 

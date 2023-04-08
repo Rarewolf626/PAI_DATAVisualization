@@ -35,6 +35,16 @@ const OPTIONS = {
     y: {
       beginAtZero: true // It makes the chart begin from 0 instead of the min value of the data
     }
+  },
+  plugins: {
+    title: {                  // Activate the Title of the chart
+      display: true,
+      color: 'black',
+      text: 'Bad example of a chart',
+      font: {
+        size: 30,
+      }
+    }
   }
 };
 
