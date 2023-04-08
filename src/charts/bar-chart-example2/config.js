@@ -28,24 +28,29 @@ const TYPE = 'bar';
  * Data options, this options are set to all Data objects in the Chart
  */
 const OPTIONS = {
-  responsive: true, // Respond to size changes in the canvas
+  responsive: true,           // Respond to size changes in the canvas
   maintainAspectRatio: false, // Desactive the AspectRatio
-  indexAxis: 'x', // Change it to y to make a horizontal bar Chart
+  indexAxis: 'x',             // Change it to y to make a horizontal bar Chart
   scales: {
     y: {
-      beginAtZero: false // It makes the chart begin from 0 instead of the min value of the data
-    }
+      beginAtZero: true,      // It makes the chart begin from 0 instead of the min value of the data
+      stacked: true           // Enable the display of a stack bar chart 
+    },
+    x: {
+      stacked: true,          // Enable the display of a stack bar chart 
+      reverse: true           // Display the information from the last DataObject to the first one
+    },
   },
   plugins: {
     title: {                  // Activate the Title of the chart
       display: true,
       color: 'black',
-      text: 'Bad example of a chart',
+      text: 'GDP(PIB) of different countries',
       font: {
         size: 30,
       }
     }
-  }
+  },
 };
 
 /** 
@@ -53,7 +58,7 @@ const OPTIONS = {
  * It contains all the necessary information for the BarChart to work
  */
 export const CONFIG = {
-  type: TYPE, // The type of the chart
-  data: DATA, // The ChartData object that contains all the information that is going to be displayed and their respective options
+  type: TYPE,      // The type of the chart
+  data: DATA,      // The ChartData object that contains all the information that is going to be displayed and their respective options
   options: OPTIONS // All the general options of the chart
 };
