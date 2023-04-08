@@ -17,23 +17,26 @@
 
 import { DATA } from './setup.js';
 
-const TYPE = 'scatter'; // Contains the type of the Chart, in this case is a Scatter Chart
-
-
+/**
+ * @desc  The general options of the bar chart, 
+ * includes chart specific options like resposive or the aspecRatio but can have
+ * Data options, this options are set to all Data objects in the Chart
+ */
 const OPTIONS = {
-  responsive: true,  // Respond to size changes in the canvas
+  responsive: true,           // Respond to size changes in the canvas
   maintainAspectRatio: false, // Desactive the AspectRatio
   scales: {
-    indexAxis: 'x', // Change it to 'y' to make a horizontal bar Chart
     y: {
-      beginAtZero: true // It makes the chart begin from 0 instead of the min value of the data
+      beginAtZero: true       // It makes the chart begin from 0 instead of the min value of the data
     }
   }
 }
 
-/** @desc Configuration of the chart */
+/** 
+ * @desc Configuration of the chart 
+ * It contains all the necessary information for the MixedChart to work
+ */
 export const CONFIG = {
-  type: TYPE, // The type of the chart
-  data: DATA, // The data that is going to be displayed
+  data: DATA,      // The data that is going to be displayed
   options: OPTIONS // All other options of the chart, It can set data options in all DataSets
 };

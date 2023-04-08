@@ -29,37 +29,37 @@ const TYPE = 'radar';
  * Data options, this options are set to all Data objects in the Chart
  */
 const OPTIONS = {
-  responsive: true,           // Respond to size changes in the canvas
-  maintainAspectRatio: false, // Desactive the AspectRatio
+  responsive: true,             // Respond to size changes in the canvas
+  maintainAspectRatio: false,   // Desactive the AspectRatio
   scales: {
-    r: {                      // Change the configuration of the Radial Axis 
-      min: 1,                 // Set the minimum value of the chart to 1
-      max: 160,               // Set the maximum value of the chart to 160
-      grid: {                 // Configuration of the grid lines 
-        color: 'black',
-        lineWidth: 2,
+    r: {                        // Change the configuration of the Radial Axis 
+      min: 1,                   // Set the minimum value of the chart to 1
+      max: 100,                 // Set the maximum value of the chart to 160
+      grid: {                   // Configuration of the grid lines 
+        color: 'black',         // Set the color of the grid lines
+        lineWidth: 2,           // Set the lineWidth of the grid lines
       },
-      pointLabels: {          // Configuration of the labels displayed outside the chart
-        color: 'black',
+      pointLabels: {            // Configuration of the labels displayed outside the chart
+        color: 'black',         // Set the color of the labels displayed outside the chart
         font: {
-          size: 25,
+          size: 25,             // Set the font size of the labels displayed outside the chart
         }
       },
-      ticks: {                // The marks displayed inside the chart
-        color: 'black',
+      ticks: {                  // The marks displayed inside the chart
+        color: 'black',         // Set the color of the marks 
         font: {
-          size: 15
+          size: 15              // Set the font size of the marks
         }
       }
     }
   },
   plugins: {
-    title: {                  // Activate the Title of the chart
-      display: true,
-      color: 'black',
-      text: 'Stats visualizer',
+    title: {                    // Activate the Title of the chart
+      display: true,            // True to display the title
+      color: 'black',           // Set the color of the title
+      text: 'Stats visualizer', // Set the text displayed in the title
       font: {
-        size: 30,
+        size: 30,               // Set the font size of the title
       }
     }
   }
@@ -67,7 +67,7 @@ const OPTIONS = {
 
 /** 
  * @desc Configuration of the chart 
- * It contains all the necessary information for the BarChart to work
+ * It contains all the necessary information for the RadarChart to work
  */
 export const CONFIG = {
   type: TYPE,      // The type of the chart
