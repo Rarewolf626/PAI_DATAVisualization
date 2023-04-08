@@ -11,8 +11,8 @@
  * @desc Configuration for the pie chart
  *       
  * @see {@link https://github.com/ULL-ESIT-PAI-2022-2023/2022-2023-pai-data-visualization}
+ * @see {@link https://www.chartjs.org/docs/latest/charts/doughnut.html} 
  */
-
 'use strict';
 
 import { BUDGET } from '../../data/presupuesto.js';
@@ -27,16 +27,16 @@ let labels = [];  // Array with the name of the budgetElement
 for (let data of budgedElements) {
   budgets.push(Number(data.previsionInicialEjercicio));
   labels.push(data.clasificacionEconomica.label);
-  colors.push(`rgba(${Math.random() * 256}, ${Math.random() * 256} , ${Math.random() * 256}, 1)`); // Reddish colors
+  colors.push(`rgba(${Math.random() * 256}, ${Math.random() * 256} , ${Math.random() * 256}, 1)`); // random colors
 }
 
 /**
  * @desc A ChartData object that contains all the information
- * that will be displayed in the Linechart, can have multiple options 
+ * that will be displayed in the Piechart, can have multiple options 
  * for different datasets
  */
 export const DATA = { 
-  labels: labels,             // Names that will be show above the pie chart
+  labels: labels,             // Names that will be shown above the pie chart
   datasets: [{                // Array of DataSet objects
     data: budgets,            // Set the displayed data with the information collected
     backgroundColor: colors,  // Color inside each segment of the PieChart

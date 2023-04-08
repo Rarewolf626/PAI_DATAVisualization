@@ -28,7 +28,7 @@ for (let pernoctation of PERNOCTATIONS_DATA) {
 }
 years = Array.from(years);                               // Transform the Set to an Array
 let chartDataArray = [];                                 // Create a new Array that will contain the data that will be displayed
-for (let data of dataMap) { chartDataArray.push(data); } // Push the data from the map into an Array
+for (let data of dataMap) { chartDataArray.push(data[1]); } // Push the data from the map into an Array
 
 const LIGHT_BLUE = 'rgb(75, 192, 192)';
 

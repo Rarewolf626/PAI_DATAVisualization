@@ -11,6 +11,7 @@
  * @desc Configuration for the pie chart
  *       
  * @see {@link https://github.com/ULL-ESIT-PAI-2022-2023/2022-2023-pai-data-visualization}
+ * @see {@link https://www.chartjs.org/docs/latest/charts/doughnut.html} 
  */
 
 'use strict';
@@ -34,7 +35,7 @@ for (let data of totalAmounfOfTraffic2016) {
 
 /**
  * @desc A ChartData object that contains all the information
- * that will be displayed in the Linechart, can have multiple options 
+ * that will be displayed in the Piechart, can have multiple options 
  * for different datasets
  */
 export const DATA = { 
