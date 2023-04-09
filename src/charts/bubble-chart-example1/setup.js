@@ -20,17 +20,18 @@ import { Cluster } from './kmeans/Cluster.js';
 import { solve } from './kmeans/Kmeans.js';
 import { POINTS } from './points.js';
 
-let cluster = new Cluster(); // Create a new Cluster
+let cluster = new Cluster();                               // Create a new Cluster
 for (let point of POINTS) {
-  cluster.insertPoint(new Point2D(point[0], point[1])); // Add all points in the problem cluster
+  cluster.insertPoint(new Point2D(point[0], point[1]));    // Add all points in the problem cluster
 }
-let dataSets = solve(cluster, 4); // Solves the cluster problem using Kmeans
-const COLORS =  ['red', 'green', 'blue', 'black']; // Array of colors
+let dataSets = solve(cluster, 4);                          // Solves the cluster problem using Kmeans
+const COLORS =  ['red', 'green', 'blue', 'black'];         // Array of colors
 const STYLES =  ['circle', 'triangle', 'rect', 'rectRot']; // Array of PointStyles
 let counter = 0;
-for (let dataSet of dataSets) { // Set a color and a pointStyle for each cluster
-  dataSet.backgroundColor = COLORS[counter];
-  dataSet.pointStyle = STYLES[counter];
+for (let dataSet of dataSets) {                            // Set a color and a pointStyle for each cluster
+  let randomColor = `rgba(${Math.random() * 256}, ${Math.random() * 256} , ${Math.random() * 256}, 1)`;
+  dataSet.backgroundColor = (counter < COLORS.length)? COLORS[counter] : randomColor;
+  dataSet.pointStyle = (counter < STYLES.length)? STYLES[counter] : 'circle';
   counter++;
 }
 

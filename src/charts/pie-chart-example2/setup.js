@@ -20,11 +20,11 @@ import { BUDGET } from '../../data/presupuesto.js';
 const MINIMUM_VALUE = 15000000;  // Set the minimum value of the budget to be able to appear in the chart with its own name
 let otherbudget = 0;
 let colors = [];
-let budgets= [];  // Array with all the total budgets
-let labels = [];  // Array with the name of the budgetElement
+let budgets= [];                 // Array with all the total budgets
+let labels = [];                 // Array with the name of the budgetElement
 for (let data of BUDGET) {
   let budget = Number(data.previsionInicialEjercicio);
-  if (budget > MINIMUM_VALUE) {
+  if (budget > MINIMUM_VALUE) {  // If the budget is not high enough its archieved as others
     budgets.push(budget);
     labels.push(data.clasificacionEconomica.label);
   } else {
