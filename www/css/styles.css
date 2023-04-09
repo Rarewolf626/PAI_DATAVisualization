@@ -1,0 +1,14 @@
+h1 {
+  text-align: center;
+}
+
+body {
+  background: rgb(255, 255, 255);
+  color: blue;
+}
+
+.chart-container {
+  position: relative;
+  height: 720px;
+  width: 100%;
+} 
