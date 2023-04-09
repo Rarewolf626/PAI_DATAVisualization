@@ -17,18 +17,23 @@
 
 import { BUDGET } from '../../data/presupuesto.js';
 
-let budgedElements = [];
-for (let data of BUDGET) {
-  if (Number(data.previsionInicialEjercicio) > 5000000) { budgedElements.push(data); }
-}
+const MINIMUM_VALUE = 15000000;  // Set the minimum value of the budget to be able to appear in the chart with its own name
+let otherbudget = 0;
 let colors = [];
 let budgets= [];  // Array with all the total budgets
 let labels = [];  // Array with the name of the budgetElement
-for (let data of budgedElements) {
-  budgets.push(Number(data.previsionInicialEjercicio));
-  labels.push(data.clasificacionEconomica.label);
+for (let data of BUDGET) {
+  let budget = Number(data.previsionInicialEjercicio);
+  if (budget > MINIMUM_VALUE) {
+    budgets.push(budget);
+    labels.push(data.clasificacionEconomica.label);
+  } else {
+    otherbudget += budget;
+  }
   colors.push(`rgba(${Math.random() * 256}, ${Math.random() * 256} , ${Math.random() * 256}, 1)`); // random colors
 }
+budgets.push(otherbudget);
+labels.push('Others');
 
 /**
  * @desc A ChartData object that contains all the information

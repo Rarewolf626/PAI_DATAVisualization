@@ -34,7 +34,7 @@ const OPTIONS = {
   maintainAspectRatio: false, // Desactive the AspectRatio
   scales: {
     r: {
-      min: 1000,
+      min: 0,
     }
   },
   plugins: {
