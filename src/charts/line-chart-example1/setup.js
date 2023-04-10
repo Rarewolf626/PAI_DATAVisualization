@@ -40,7 +40,7 @@ const LIGHT_BLUE = 'rgb(75, 192, 192)';
 export const DATA = {
   labels: years,                                                              // Names that will be shown in the legend
   datasets: [{                                                                // Array of objects of type ChartData
-    label: 'Total percnoctations in hotels in Tenerife throughout the years', // Names that will be shown in the legend
+    label: 'Total pernoctations in hotels in Tenerife throughout the years', // Names that will be shown in the legend
     data: chartDataArray,                                                     // object|object[]|number[]|string[]
     fill: false,                                                              // If true, fills the area under the line
     borderColor: LIGHT_BLUE,                                                  // Line color
