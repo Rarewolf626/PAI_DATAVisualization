@@ -30,7 +30,8 @@ years = Array.from(years);                                  // Transform the Set
 let chartDataArray = [];                                    // Create a new Array that will contain the data that will be displayed
 for (let data of dataMap) { chartDataArray.push(data[1]); } // Push the data from the map into an Array
 
-const LIGHT_BLUE = 'rgb(75, 192, 192)';
+const LIGHT_BLUE = 'rgb(75, 192, 0)';
+const GREEN = 'rgb(75, 192, 0)';
 
 /**
  * @desc A ChartData object that contains all the information
