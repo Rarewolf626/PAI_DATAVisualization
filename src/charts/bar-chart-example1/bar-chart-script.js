@@ -22,8 +22,8 @@ Chart.register(...registerables);
 import { CONFIG } from './config.js';
 
 /**
- * @desc the main function of the program
- * it gets the canvas and creates the chart 
+ * @desc The main function of the program
+ * It gets the canvas and creates the chart 
  */
 function main() {
   const CONTEXT = document.getElementById('myChart').getContext('2d'); // Get The CanvasRenderingContext2D

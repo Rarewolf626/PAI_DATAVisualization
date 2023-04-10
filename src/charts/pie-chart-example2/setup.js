@@ -18,7 +18,7 @@
 import { BUDGET } from '../../data/presupuesto.js';
 
 const MINIMUM_VALUE = 15000000;  // Set the minimum value of the budget to be able to appear in the chart with its own name
-let otherbudget = 0;
+let otherBudget = 0;
 let colors = [];
 let budgets= [];                 // Array with all the total budgets
 let labels = [];                 // Array with the name of the budgetElement
@@ -28,11 +28,11 @@ for (let data of BUDGET) {
     budgets.push(budget);
     labels.push(data.clasificacionEconomica.label);
   } else {
-    otherbudget += budget;
+    otherBudget += budget;
   }
   colors.push(`rgba(${Math.random() * 256}, ${Math.random() * 256} , ${Math.random() * 256}, 1)`); // random colors
 }
-budgets.push(otherbudget);
+budgets.push(otherBudget);
 labels.push('Others');
 
 /**
@@ -45,8 +45,8 @@ export const DATA = {
   datasets: [{                // Array of DataSet objects
     data: budgets,            // Set the displayed data with the information collected
     backgroundColor: colors,  // Color inside each segment of the PieChart
-    hoverOffset: 10,          // How much the segment move away from the chart
-    //borderColor: 'black',   // The Color of the border lines
+    hoverOffset: 10,          // How much the hovering element moves away from the chart
+    //borderColor: 'black',   // The color of the border lines
     //borderWitdh: 2,         // The thickness of the boder lines
   }],                        
 };

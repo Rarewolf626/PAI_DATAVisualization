@@ -24,13 +24,11 @@ import { DATA } from './setup.js';
 const TYPE = 'bubble'; 
 
 /**
- * @desc  The general options of the bar chart, 
- * includes chart specific options like resposive or the aspecRatio but can have
- * Data options, this options are set to all Data objects in the Chart
+ * @desc  The general options of the bar chart
  */
 const OPTIONS = {
   responsive: true,           // Respond to size changes in the canvas
-  maintainAspectRatio: false, // Desactive the AspectRatio
+  maintainAspectRatio: false, // Deactivates the AspectRatio
   plugins: {
     title: {                  // Activate the Title of the chart
       display: true,

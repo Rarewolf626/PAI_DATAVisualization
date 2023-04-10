@@ -15,7 +15,7 @@
  */
 
 /**
- * @desc A bad Example of data that can be displayed in a chart
+ * @desc A bad example of data that can be displayed in a chart
  */
 const data = [
   { year: 2010, count: 10 },

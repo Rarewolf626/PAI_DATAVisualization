@@ -29,7 +29,7 @@ const TYPE = 'bar';
  */
 const OPTIONS = {
   responsive: true,           // Respond to size changes in the canvas
-  maintainAspectRatio: false, // Desactive the AspectRatio
+  maintainAspectRatio: false, // Deactivates the AspectRatio
   indexAxis: 'x',             // Change it to y to make a horizontal bar Chart
   scales: {
     y: {
@@ -59,6 +59,7 @@ const OPTIONS = {
  */
 export const CONFIG = {
   type: TYPE,      // The type of the chart
-  data: DATA,      // The ChartData object that contains all the information that is going to be displayed and their respective options
+  data: DATA,      // The ChartData object that contains all the information
+                   // that is going to be displayed and their respective options
   options: OPTIONS // All the general options of the chart
 };

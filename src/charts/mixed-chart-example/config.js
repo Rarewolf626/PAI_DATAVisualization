@@ -18,13 +18,11 @@
 import { DATA } from './setup.js';
 
 /**
- * @desc  The general options of the bar chart, 
- * includes chart specific options like resposive or the aspecRatio but can have
- * Data options, this options are set to all Data objects in the Chart
+ * @desc  The general options of the bar chart.
  */
 const OPTIONS = {
   responsive: true,           // Respond to size changes in the canvas
-  maintainAspectRatio: false, // Desactive the AspectRatio
+  maintainAspectRatio: false, // Deactivate the AspectRatio
   scales: {
     y: {
       beginAtZero: true       // It makes the chart begin from 0 instead of the min value of the data
@@ -38,5 +36,5 @@ const OPTIONS = {
  */
 export const CONFIG = {
   data: DATA,      // The data that is going to be displayed
-  options: OPTIONS // All other options of the chart, It can set data options in all DataSets
+  options: OPTIONS // All other options of the chart
 };

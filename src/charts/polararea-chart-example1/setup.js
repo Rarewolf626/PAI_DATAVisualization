@@ -22,7 +22,7 @@ let colors = [];
 let votes = new Map();
 for (let electoralTable of RESULTS) {
   let politicParty = electoralTable.coalicion_partido;                                                              
-  let previousVotes = (votes.get(politicParty))? votes.get(politicParty) : 0;                      // Check if the politicalParty has votes
+  let previousVotes = (votes.get(politicParty)) ? votes.get(politicParty) : 0;                      // Check if the politicalParty has votes
   votes.set(politicParty, previousVotes + electoralTable.votos);                                   // Add the new votes into the politicalParty
   colors.push(`rgba(${Math.random() * 256}, ${Math.random() * 256} , ${Math.random() * 256}, 1)`); // random colors
 }
@@ -52,8 +52,8 @@ export const DATA = {
   datasets: [{                        // Array of dataSet objects
     data: totalVotes,                 // Only accepts Number[]
     backgroundColor: colors,          // The color of each segment in the chart
-    hoverOffset: 10                   // How much the segment move away from the chart
-    // borderColor: 'black',          // The Color of the border lines
+    hoverOffset: 10                   // How much the hovering element moves away from the chart
+    // borderColor: 'black',          // The color of the border lines
     // borderWitdh: 1,                // The thickness of the boder lines
   }]
 };

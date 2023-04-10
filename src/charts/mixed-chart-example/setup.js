@@ -29,16 +29,16 @@ export const DATA = {
   labels: dataMonths,
   datasets: [{                                 // Array of Objects of type ChartData
     type: 'bar',                               // The type of the chart
-    label: 'Bar Dataset',                      // Name that are going to be shown in the legend.
+    label: 'Bar Dataset',                      // Name that is going to be shown in the legend
     data: dataArray,                           // The value of the data 
-    borderColor: 'red',                        // An Array of Colors for each Bar in the Chart. This color represent the inside of each bar
-    backgroundColor: TRANSPARENT_RED           // An Array of Colors for each Bar in the Chart. This color represent the lines of each bar
+    borderColor: 'red',                        // An Array of colors for each bar's border in the Chart
+    backgroundColor: TRANSPARENT_RED           // An Array of colors for each bar in the Chart
   }, {
     type: 'line',                              // The type of the chart
-    label: 'Line Dataset',                     // Name that are going to be shown in the legend.
+    label: 'Line Dataset',                     // Name that is going to be shown in the legend
     data: dataArray,                           // The value of the data
     fill: false,                               // If true, fills the area under the line
-    tension: 0.1,                              // Represent the curve of the line can be more than 1, but is discouraged
-    borderColor: 'blue'                        // line color
+    tension: 0.1,                              // Represents the curve of the line. Can be more than 1, but is discouraged
+    borderColor: 'blue'                        // Line color
   }]
 };

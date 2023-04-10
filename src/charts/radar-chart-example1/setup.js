@@ -27,7 +27,7 @@ export const DATA = {
     'Health Points',
     'Attack',
     'Defense',
-    'Velocity',
+    'Speed',
     'Special defense',
     'Special attack',
   ],
@@ -45,7 +45,7 @@ export const DATA = {
       pointStyle: 'triangle',                 // The style of the points inside the chart
     }, 
     {
-      label: 'A standar player',               // Name that will be shown in the legend
+      label: 'A standard player',              // Name that will be shown in the legend
       data: [50, 30, 20, 50, 10, 10],          // Only accepts Number[]
       fill: true,                              // If true, fill the area inside the lines
       backgroundColor: TRANSPARENT_DARK_GREEN, // The color of the area inside the lines
@@ -69,7 +69,7 @@ export const DATA = {
       pointStyle: 'cross'                      // The style of the points inside the chart
     },
     {
-      label: 'An quick player',                // Name that will be shown in the legend
+      label: 'A quick player',                // Name that will be shown in the legend
       data: [75, 25, 10, 75, 10, 10],          // Only accepts Number[]
       fill: true,                              // If true, fill the area inside the lines
       backgroundColor: TRANSPARENT_AQUA,       // The color of the area inside the lines

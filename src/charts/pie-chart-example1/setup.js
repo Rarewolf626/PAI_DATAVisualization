@@ -18,16 +18,16 @@
 
 import { MARITIME_TRAFFIC } from '../../data/trafico-maritimo.js';
 
-let totalAmounfOfTraffic2016 = [];
+let totalAmountOfTraffic2016 = [];
 for (let data of MARITIME_TRAFFIC.DATOS) {  
   if (data.PERIODO === '2016 TOTAL (p)') { 
-    totalAmounfOfTraffic2016.push(data);    // Select only the information that is from the total of 2016
+    totalAmountOfTraffic2016.push(data);    // Select only the information that is from the total of 2016
   }
 }
 const COLORS = ['red', 'yellow', 'blue', 'green'];
 let traffic = []; // Array with all the total traffics for each port
 let labels = [];  // Array with the name of all ports
-for (let data of totalAmounfOfTraffic2016) {
+for (let data of totalAmountOfTraffic2016) {
   let totalTraffic = Number(data.pasajeros_de_crucero) + Number(data.pasajeros_en_linea_regular);
   labels.push(data.PUERTO); 
   traffic.push(totalTraffic);
@@ -39,12 +39,12 @@ for (let data of totalAmounfOfTraffic2016) {
  * for different datasets
  */
 export const DATA = { 
-  labels: labels,             // Names that will be show above the pie chart
+  labels: labels,             // Names that will be shown above the pie chart
   datasets: [{                // Array of DataSet objects
     data: traffic,            // Set the displayed data with the information collected
     backgroundColor: COLORS,  // Color inside each segment of the PieChart
-    hoverOffset: 10,          // How much the segment move away from the chart
-    //borderColor: 'black',   // The Color of the border lines
+    hoverOffset: 10,          // How much the hovering element moves away from the chart
+    //borderColor: 'black',   // The color of the border lines
     //borderWitdh: 2,         // The thickness of the boder lines
   }],                        
 };

@@ -38,12 +38,12 @@ const LIGHT_BLUE = 'rgb(75, 192, 192)';
  * for different datasets
  */
 export const DATA = {
-  labels: years,                                                              // names that will show in the legend
+  labels: years,                                                              // Names that will be shown in the legend
   datasets: [{                                                                // Array of objects of type ChartData
-    label: 'Total percnoctations in hotels in Tenerife throughout the years', // names that will show in the legend
+    label: 'Total percnoctations in hotels in Tenerife throughout the years', // Names that will be shown in the legend
     data: chartDataArray,                                                     // object|object[]|number[]|string[]
     fill: false,                                                              // If true, fills the area under the line
-    borderColor: LIGHT_BLUE,                                                  // line color
+    borderColor: LIGHT_BLUE,                                                  // Line color
     backgroundColor: LIGHT_BLUE ,                                             // Color of the area under the line
     pointBorderColor: 'red',                                                  // Color of the line border of the point
     pointBackgroundColor: 'red',                                              // Color of the point

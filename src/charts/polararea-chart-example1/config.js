@@ -25,13 +25,11 @@ import { DATA } from './setup.js';
 const TYPE = 'polarArea'; 
 
 /**
- * @desc The general options of the Polar Area chart, 
- * includes chart specific options like resposive or the aspecRatio but can have
- * Data options, this options are set to all Data objects in the Chart
+ * @desc The general options of the Polar Area chart.
  */
 const OPTIONS = {
   responsive: true,           // Respond to size changes in the canvas
-  maintainAspectRatio: false, // Desactive the AspectRatio
+  maintainAspectRatio: false, // Deactivate the AspectRatio
   scales: {
     r: {
       min: 0,
@@ -59,5 +57,5 @@ const OPTIONS = {
 export const CONFIG = {
   type: TYPE,      // The type of the chart
   data: DATA,      // The data that is going to be displayed
-  options: OPTIONS // All other options of the chart, It can set data options in all DataSets
+  options: OPTIONS // All other options of the chart
 };

@@ -25,36 +25,34 @@ import { DATA } from './setup.js';
 const TYPE = 'line'; 
 
 /**
- * @desc  The general options of the line chart, 
- * includes chart specific options like resposive or the aspecRatio but can have
- * Data options, this options are set to all Data objects in the Chart
+ * @desc  The general options of the line chart
  */
 const OPTIONS = {
   responsive: true,  // Respond to size changes in the canvas
-  maintainAspectRatio: false, // Desactive the AspectRatio
+  maintainAspectRatio: false, // Deactivate the AspectRatio
   scales: {
     y: { 
-      min: 10000000, // It set the minium value to display in the Y Axis of the chart
-      max: 90000000, // It set the maximum value to display in the Y Axis of the chart 
+      min: 10000000, // It sets the minium value to display in the Y Axis of the chart
+      max: 90000000, // It sets the maximum value to display in the Y Axis of the chart 
       ticks: { // A tick is the value that is displayed in the axis 
         font: {
-          size: 10 // Change the font size to 10px
+          size: 10 // Changes the font size to 10px
         }, 
-        stepSize: 10000000 // Represent the jump from each tick in the Y Axis
+        stepSize: 10000000 // Represents the jump from each tick in the Y Axis
       }
     },
     x: {
       ticks: { // A tick is the value that is displayed in the axis 
         font: {
-          size: 10 // Change the font size to 10px
+          size: 10 // Changes the font size to 10px
         }
       }, 
-      reverse: true // Display the information from the last DataObject to the first one
+      reverse: true // Displays the information from the last DataObject to the first one
     }
   },
-  tension: 0.5, // Represent the curve of the line can be more than 1, but is discouraged
-  /* If uncommented the line chart will have a little animation that change the tension from 0.5 to 0.1
-  animations: {
+  tension: 0.5, // Represents the curve of the line. Can be more than 1, but is discouraged
+  // If uncommented the line chart will have a little animation that change the tension from 0.5 to 0.1
+  /* animations: {
     tension: {
       duration: 500,
       easing: 'linear',
@@ -77,11 +75,11 @@ const OPTIONS = {
 }
 
 /** 
- * @desc Configuration of the chart 
+ * @desc Configuration of the chart
  * It contains all the necessary information for the LineChart to work
  */
 export const CONFIG = {
   type: TYPE,      // The type of the chart
   data: DATA,      // The data that is going to be displayed
-  options: OPTIONS // All other options of the chart, It can set data options in all DataSets
+  options: OPTIONS // All other options of the chart
 };

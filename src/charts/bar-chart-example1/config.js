@@ -23,13 +23,11 @@ import { DATA } from './setup.js';
 const TYPE = 'bar';
 
 /**
- * @desc  The general options of the bar chart, 
- * includes chart specific options like resposive or the aspecRatio but can have
- * Data options, this options are set to all Data objects in the Chart
+ * @desc  The general options of the bar chart
  */
 const OPTIONS = {
   responsive: true, // Respond to size changes in the canvas
-  maintainAspectRatio: false, // Desactive the AspectRatio
+  maintainAspectRatio: false, // Deactivates the AspectRatio
   indexAxis: 'x', // Change it to y to make a horizontal bar Chart
   scales: {
     y: {
@@ -54,6 +52,7 @@ const OPTIONS = {
  */
 export const CONFIG = {
   type: TYPE, // The type of the chart
-  data: DATA, // The ChartData object that contains all the information that is going to be displayed and their respective options
+  data: DATA, // The ChartData object that contains all the information
+              // that is going to be displayed and their respective options
   options: OPTIONS // All the general options of the chart
 };
