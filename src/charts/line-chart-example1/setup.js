@@ -45,8 +45,8 @@ export const DATA = {
     data: chartDataArray,                                                     // object|object[]|number[]|string[]
     fill: false,                                                              // If true, fills the area under the line
     borderColor: LIGHT_BLUE,                                                  // Line color
-    backgroundColor: LIGHT_BLUE ,                                             // Color of the area under the line
-    pointBorderColor: 'red',                                                  // Color of the line border of the point
+    backgroundColor: LIGHT_BLUE ,                                             // Color of the line border of the point
+    pointBorderColor: 'red',                                                  // Color of the area under the line
     pointBackgroundColor: 'red',                                              // Color of the point
     borderWidth: 1                                                            // Changes the size of the line 
   }],
